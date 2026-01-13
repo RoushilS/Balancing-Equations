@@ -1,7 +1,7 @@
 public class Atom {
-    String name;
+    private String name;
 
-    int amount = 1;
+    private int amount = 1;
 
 
     public Atom() {}
@@ -13,6 +13,22 @@ public class Atom {
     public Atom(String name, int amount) {
         this.name=name;
         this.amount = amount;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return amount;
+    }
+
+    public boolean applyFactorWorks(double f) {
+        return amount*f%1==0;
+    }
+
+    public applyFactor(double f) {
+        amount*=f;
     }
 
 }
