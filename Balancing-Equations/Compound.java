@@ -4,7 +4,13 @@ public class Compound {
 
     ArrayList<Atom> atoms = new ArrayList<Atom>();
 
+    private int coefficient = 1;
+
     public Compound() {}
+
+    public int getCoefficient() {
+        return coefficient;
+    }
 
     public void addAtom(Atom atom) {
         atoms.add(atom);
@@ -18,7 +24,7 @@ public class Compound {
         return sum;
     }
 
-    public boolean applyFactor(double f) {
+    public boolean applyCoefficient(double f) {
         for (Atom a : atoms) {
             if (!a.applyFactorWorks(f)) {
                 return false;
@@ -27,6 +33,7 @@ public class Compound {
         for (Atom a : atoms) {
             a.applyFactor(f);
         }
+        coefficient = f;
         return true;
     }
 
