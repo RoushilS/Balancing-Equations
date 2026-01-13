@@ -1,11 +1,17 @@
 public class EquationSide {
 
-    ArrayList<Compound> compounds = new ArrayList<Compound>();
+    private ArrayList<Compound> compounds = new ArrayList<Compound>();
 
     public EquationSide() {}
 
     public void addCompound(Compound c) {
-        compounds.add(c)
+        compounds.add(c);
+    }
+
+    public void addCompounds(Compound ... compoundAddList) {
+        for (Compound compound : compoundAddList) {
+            compounds.add(compound)
+        }
     }
 
     public int getNumber() {
@@ -14,4 +20,10 @@ public class EquationSide {
             sum+=c.getNumber;
         }
     }
+
+    public ArrayList<Compound> getCompounds() {
+        return compounds;
+    }
+
+    
 }

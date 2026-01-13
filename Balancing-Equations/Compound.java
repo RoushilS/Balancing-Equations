@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Compound {
 
-    ArrayList<Atom> atoms = new ArrayList<Atom>();
+    private ArrayList<Atom> atoms = new ArrayList<Atom>();
 
     private int coefficient = 1;
 
@@ -16,12 +16,22 @@ public class Compound {
         atoms.add(atom);
     }
 
+    public void addAtoms(Atom ... atomAddList) {
+        for (Atom atom : atomAddList) {
+            atoms.add(atom);
+        }
+    }
+
     public int getNumber() {
         sum = 0
         for (Atom a : atoms) {
             sum+=a.getNumber
         }
         return sum;
+    }
+
+    public ArrayList<Atom> getAtoms() {
+        return atoms;
     }
 
     public boolean applyCoefficient(double f) {
