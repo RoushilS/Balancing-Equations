@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class EquationSide {
 
     private ArrayList<Compound> compounds = new ArrayList<Compound>();
@@ -10,15 +12,16 @@ public class EquationSide {
 
     public void addCompounds(Compound ... compoundAddList) {
         for (Compound compound : compoundAddList) {
-            compounds.add(compound)
+            compounds.add(compound);
         }
     }
 
     public int getNumber() {
-        sum = 0
+        int sum = 0;
         for (Compound c : compounds) {
-            sum+=c.getNumber;
+            sum+=c.getNumber();
         }
+        return sum;
     }
 
     public ArrayList<Compound> getCompounds() {

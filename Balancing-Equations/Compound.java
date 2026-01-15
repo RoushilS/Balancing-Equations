@@ -23,9 +23,9 @@ public class Compound {
     }
 
     public int getNumber() {
-        sum = 0
+        int sum = 0;
         for (Atom a : atoms) {
-            sum+=a.getNumber
+            sum+=a.getNumber();
         }
         return sum;
     }
@@ -43,7 +43,7 @@ public class Compound {
         for (Atom a : atoms) {
             a.applyFactor(f);
         }
-        coefficient = f;
+        coefficient = (int) (coefficient*f);
         return true;
     }
 

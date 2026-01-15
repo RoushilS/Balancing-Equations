@@ -27,7 +27,7 @@ public class Atom {
         return amount*f%1==0;
     }
 
-    public applyFactor(double f) {
+    public void applyFactor(double f) {
         amount*=f;
     }
 

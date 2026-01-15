@@ -5,16 +5,16 @@ public class Equation {
 
     public Equation() {}
 
-    public void addProducts(Compounds... compoundList) {
+    public void addProducts(Compound... compoundList) {
         products.addCompounds(compoundList);
     }
 
-    public void addReactants(Compounds... compoundList) {
+    public void addReactants(Compound... compoundList) {
         reactants.addCompounds(compoundList);
     }
 
     public boolean checkMatches() {
-        return products.getNumber==reactants.getNumber;
+        return products.getNumber()==reactants.getNumber();
     }
 
     public void solveEquation() {
