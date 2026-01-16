@@ -34,6 +34,10 @@ public class Compound {
         return atoms;
     }
 
+    public int getAtomNumber() {
+        return atoms.size();
+    }
+
     public boolean applyCoefficient(double f) {
         for (Atom a : atoms) {
             if (!a.applyFactorWorks(f)) {

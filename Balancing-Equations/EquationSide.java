@@ -28,5 +28,9 @@ public class EquationSide {
         return compounds;
     }
 
+    public void sortCompounds() {
+        compounds.sort(Comparator.comparingInt(Compound::getAtomNumber));
+    }
+
     
 }

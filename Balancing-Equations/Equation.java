@@ -17,8 +17,13 @@ public class Equation {
         return products.getNumber()==reactants.getNumber();
     }
 
+
     public void solveEquation() {
-        
+        reactants.sort();
+        products.sort();
+        while (!checkMatches) {
+            true;
+        }
     }
 
 }
