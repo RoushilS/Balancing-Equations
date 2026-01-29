@@ -19,11 +19,10 @@ public class Equation {
 
 
     public void solveEquation() {
-        reactants.sort();
-        products.sort();
-        while (!checkMatches) {
-            true;
+        reactants.sortCompounds();
+        products.sortCompounds();
+        while (!checkMatches()) {
+            ;
         }
     }
-
 }
